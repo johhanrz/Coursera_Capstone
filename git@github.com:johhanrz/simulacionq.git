@@ -1,0 +1,175 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled0.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyOPzAChudgcK0A0AqZlJPTH",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/johhanrz/Coursera_Capstone/blob/main/git%40github.com%3Ajohhanrz/simulacionq.git\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 6,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "30gJMjHO6vbJ",
+        "outputId": "1c6fcdd0-9eb3-4e44-d192-0454b0e716eb"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['juan', 'pedro', 'jesus', 'jose']\n",
+            "['juan', 'pedro', 'jesus', 'jose', 'nestor']\n",
+            "['juan', 'pedro', 'aleja', 'jesus', 'jose', 'nestor']\n",
+            "['juan', 'pedro', 'aleja', 'aleja', 'jesus', 'jose', 'nestor']\n",
+            "['juan', 'pedro', 'aleja', 'aleja', 'jesus', 'jose', 'nestor', 'nestor', 'nestor']\n"
+          ]
+        }
+      ],
+      "source": [
+        "listnombre=['juan','pedro','jesus','jose']\n",
+        "print(listnombre)\n",
+        "\n",
+        "#agregar\n",
+        "listnombre.append('nestor')\n",
+        "\n",
+        "print(listnombre)\n",
+        "listnombre.insert(2,'aleja')\n",
+        "print(listnombre)\n",
+        "\n",
+        "listnombre.insert(2,'aleja')\n",
+        "print(listnombre)\n",
+        "listnombre.append('nestor')\n",
+        "listnombre.append('nestor')\n",
+        "print(listnombre)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# listas - operaciones\n",
+        "listNombre = ['Juan', 'Pedro', 'Jesus', 'Jose']\n",
+        "print(listNombre)\n",
+        "# Agregar\n",
+        "listNombre.append('Nestor')\n",
+        "listNombre.append('Nestor')\n",
+        "print(listNombre)\n",
+        "# Agregar con indice\n",
+        "# listNombre.insert(len(listNombre), 'Alejandra')\n",
+        "listNombre.insert(1, 'Alejandra')\n",
+        "print(listNombre)\n",
+        "\n",
+        "# Remover valor\n",
+        "listNombre.remove('Nestor')\n",
+        "print(listNombre)\n",
+        "\n",
+        "# Remover el último \n",
+        "listNombre.pop()\n",
+        "listNombre.pop()\n",
+        "print(listNombre)\n",
+        "\n",
+        "# Remover con indice\n",
+        "del listNombre[1]\n",
+        "print(listNombre)\n",
+        "\n",
+        "# Limpiar\n",
+        "listNombre.clear()\n",
+        "print(listNombre)\n",
+        "\n",
+        "# Remover la lista\n",
+        "del listNombre"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xFTMJoZV6xU1",
+        "outputId": "e5967635-6355-4f5d-f548-74757e79f2ef"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Juan', 'Pedro', 'Jesus', 'Jose']\n",
+            "['Juan', 'Pedro', 'Jesus', 'Jose', 'Nestor', 'Nestor']\n",
+            "['Juan', 'Alejandra', 'Pedro', 'Jesus', 'Jose', 'Nestor', 'Nestor']\n",
+            "['Juan', 'Alejandra', 'Pedro', 'Jesus', 'Jose', 'Nestor']\n",
+            "['Juan', 'Alejandra', 'Pedro', 'Jesus']\n",
+            "['Juan', 'Pedro', 'Jesus']\n",
+            "[]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Ejercicio Jaime - eliminar los nestor\n",
+        "listNombre = ['Juan', 'Pedro', 'Jesus', 'Jose']\n",
+        "# Agregar\n",
+        "listNombre.append('Nestor')\n",
+        "listNombre.append('Nestor')\n",
+        "print(listNombre)\n",
+        "for nombre in listNombre:\n",
+        "  if nombre == 'Nestor':\n",
+        "    listNombre.remove('Nestor')\n",
+        "print(listNombre)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CFVjWG5JDfTh",
+        "outputId": "2e46787b-c5ad-4899-e632-511cdd06cbef"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Juan', 'Pedro', 'Jesus', 'Jose', 'Nestor', 'Nestor']\n",
+            "['Juan', 'Pedro', 'Jesus', 'Jose', 'Nestor']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        ""
+      ],
+      "metadata": {
+        "id": "xSiRfFo0D4X-"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
